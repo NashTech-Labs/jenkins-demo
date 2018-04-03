@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Docker Publish') {
             steps {
-                Prepare the artifact files tool to build the image and publish artifact as Docker image
+                // Prepare the artifact files tool to build the image and publish artifact as Docker image
                 sh ${tool name: 'sbt', type: 'org.jvnet.hudson.plugins.SbtPluginBuilder$SbtInstallation'}/bin/sbt docker:publishLocal"
                 }
             }
