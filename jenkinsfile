@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        sbt 'org.jvnet.hudson.plugins.SbtPluginBuilder$SbtInstallation'
+        org.jvnet.hudson.plugins.SbtPluginBuilder$SbtInstallation 'sbt'
     }
     stages {
         stage('Build') {
