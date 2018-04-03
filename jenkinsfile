@@ -3,7 +3,10 @@ pipeline {
 
     stages {
         stage('Build') {
-                       sh "${tool name: 'sbt', type: 'org.jvnet.hudson.plugins.SbtPluginBuilder$SbtInstallation'}/bin/sbt compile test"
+            steps {
+                echo "Compiling..."
+                sh "${tool name: 'sbt', type: 'org.jvnet.hudson.plugins.SbtPluginBuilder$SbtInstallation'}/bin/sbt compile"
+            }
         }
         stage('Unit Test') {
             steps {
